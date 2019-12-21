@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>TestWebsite</title>
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/SourceCodePro.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<button id="ha">button</button>
-	<input type="text">
-
-
-
-	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+	<div class="container">
+		<div class="mainDisplay row">
+			<div class="col-md-10">
+				<div id="input">
+				<div class="preText">Yo...</div>
+				</div>
+				<div id="answer">
+					<div class="preText">Yo...</div>
+					<div id="awd1" class="answerWord">a</div>
+					<div id="awd2" class="answerWord">s</div>
+					<div id="awd3" class="answerWord">d</div>
+					<div id="awd4" class="answerWord">f</div>
+				</div>
+			</div>
+			<div class="col-md-2 panel">
+				<div id="accuracy">
+					<div id="ac" title="准确度Accuracy">Ac</div>
+					<div id="ac1" title="第一次就敲对的正确率(第二行)">
+						<!-- TODO:增加一个更好的方式显示提示信息（代替title） -->
+						<div id="ac11">100</div><div>.</div><div id="ac12">0</div>
+					</div>
+					<div id="ac2" title="提交时正确率(第一行)">
+						<div id="panelSP">/</div><div id="ac21">100</div><div>.</div><div id="ac22">0</div>
+					</div>
+				</div>
+				<div id="speed">
+					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">90</div><div>.</div><div id="sp02">2</div><div id="spUnit" title="词数/每分钟">WordPM</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</div>
 </body>
 </html>

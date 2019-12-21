@@ -1,3 +1,136 @@
+
+var disableAnimation=false,animationTime=10;//配置数据
+
+var available=true;
+var cnt=0,answerCnt=4,spaceCnt=0;//该行数据
+var ac1Cnt=0,ac2Cnt=0,totalCnt=0,totalTime=0;//累计数据
+var ac1Rate,ac2Rate,speed;//计算出的数据
+$(document).on('keypress',function(e){
+	if(!available)
+		return;
+	if(cnt>=answerCnt){
+		nextpage();
+		if(e.which!=13&&e.which!=32)//enter/space
+			console.log('Incorrectly press ['+String.fromCharCode(e.which)+'] for starting a new line');
+			//TODO:增加一个按的不是回车或空格的提示
+		return;
+	}
+	console.log('[input]'+e.which);
+	if(!keyJudge(e.which))
+		return;
+	cnt++;
+	if(e.which==32){
+		$('#input').append(
+		'<div class="word space" id="wd'+cnt+'">␣</div>\n'
+		);
+	}else{
+		$('#input').append(
+		'<div class="word" id="wd'+cnt+'">'
+		+String.fromCharCode(e.which)
+		+'</div>\n'
+		);
+	}
+	if($('#wd'+cnt).text()!=$('#awd'+cnt).text()){
+		$('#wd'+cnt).addClass('wrong');
+		$('#awd'+cnt).addClass('mistaken');
+	}else if($('#awd'+cnt).hasClass('mistaken')){
+		$('#wd'+cnt).addClass('mistaken');
+		console.log('#wd'+cnt);
+	}
+});
+
+$(document).on('keydown',function(e){
+	if(e.which==8){
+		$('#wd'+cnt).remove();
+		if(cnt>0)
+			cnt--;
+	}
+});
+
+function nextpage(){
+	available=false;
+	var i=0;
+	var refresh=setInterval(function(){
+		i++;
+		totalCnt++;
+		ac1Cnt++;
+		ac2Cnt++;
+		$('#wd'+i).text('-');
+		$('#awd'+i).text('-');
+		if($('#wd'+i).hasClass('wrong')){
+			ac2Cnt--;
+			ac2Rate=ac2Cnt/totalCnt;
+			$('#ac21').text(Math.floor(ac2Rate*100));
+			$('#ac22').text(Math.floor(ac2Rate*1000)%10);
+		}
+		if($('#awd'+i).hasClass('mistaken')){
+			ac1Cnt--;
+			ac1Rate=ac1Cnt/totalCnt;
+			$('#ac11').text(Math.floor(ac1Rate*100));
+			$('#ac12').text(Math.floor(ac1Rate*1000)%10);
+		}
+		if(i>answerCnt){
+			panelUpdate();
+			newinfo();
+			available=true;
+			clearInterval(refresh);
+		}
+	},animationTime);
+	return;
+}
+
+var info='welcome to yoyoyo';
+
+function newinfo(){
+	cnt=0;
+	$('#input').html('<div class="preText">Yo...</div>\n');
+	//TODO: 从后端载入数据
+	answerCnt=info.length;
+	spaceCnt=0;
+	$('#answer').html('<div class="preText">Yo...</div>\n');
+	for(var i=1;i<=answerCnt;i++){
+		if(info[i-1]==' '){
+			$('#answer').append('<div id="awd'+i+'" class="answerWord space">␣</div>\n');
+			spaceCnt++;
+		}
+		else
+			$('#answer').append('<div id="awd'+i+'" class="answerWord">'+info[i-1]+'</div>\n');
+
+	}
+	//$('#answer').html('<div class="preText">Yo...</div>\n<div id="awd1" class="answerWord">a</div>\n<div id="awd2" class="answerWord">s</div>\n<div id="awd3" class="answerWord">d</div>\n<div id="awd4" class="answerWord">f</div>');
+	return;
+}
+
+function panelUpdate(){
+	view();
+	return;
+}
+
+
+function view(){
+	console.log('totalCnt',totalCnt,'ac1Cnt',ac1Cnt,'ac2Cnt',ac2Cnt);
+	console.log('ac1Rate',ac1Rate,'ac2Rate',ac2Rate);
+	return;
+}
+
+function keyJudge(keynum) {
+	if(32<=keynum&&keynum<=126)//A-Z,a-z,0-9,otherChar
+		return true;
+	//TODO:添加更多准入字符?
+	return false;
+}
+
+
+/*
+TODO:
+换等宽字体
+筛选指定字符
+
+*/
+
+
+//NOTE
+
 /*
 12.3数据类型
 Number NaN Infinty
@@ -131,7 +264,7 @@ jQuery
 	//有下划线的样式要用引号框住
 	.addClass(red);
 	.removeClass(red);
-	.haveClass(red)--->returen true/false
+	.hasClass(red)--->returen true/false
 
 	.hide();
 	.show();
@@ -203,13 +336,20 @@ Ajax
 	快捷方式:get/post/getJson/getScript
 
 */
-$('button').on('dblclick',function(){
-	$('button').hide();
-	$('button').fadeIn(1000);
-})
-var cnt=0;
-var timer=setInterval(function(){$('input').focus()},200);
-$('input').on('keypress',function(e){
-	cnt++;
-	console.log(e.which);
-})
+
+/*
+$(document).keyup(function(event){
+			 switch(event.keyCode) {
+			 case 32:
+			  alert('enter!!');
+			  return;
+			  case 13:
+			  alert('space!!');
+			  case 20:
+			  alert('Cap');
+			  return;
+		
+			 }
+ 
+			});
+*/

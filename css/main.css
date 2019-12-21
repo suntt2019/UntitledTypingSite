@@ -1,0 +1,117 @@
+.view{
+	background: red;
+}
+
+body{
+	background: #333;
+}
+
+.container{
+	display: block;
+	max-width: 1440px;
+	margin: 0px auto;
+}
+
+.mainDisplay{
+	margin: 200px auto;
+	background: rgba(255,255,255,0.2);
+	padding: 20px;
+}
+
+.preText,.word,.answerWord{
+	display: inline-block;
+	margin: 5px -2px;
+	font-size: 1.7rem;
+	font-weight: bold;
+	font-family:Source Code Pro;
+}
+
+.word{
+	color: #ffffff;
+}
+
+.answerWord{
+	color: #dddddd;
+}
+
+.wrong{
+	color: #ff5050 !important;
+}
+
+.word.mistaken{
+	color: #bbbbbb;
+}
+
+.answerWord.mistaken{
+	color: #aaaaaa;
+	text-decoration:underline;
+}
+
+.space{
+	padding: 0px 3.586px;
+}
+
+.space.word{
+	color: #888888;
+}
+.space.answerWord{
+	color: #777777;
+}
+
+
+
+.panel{
+	padding: 5px;
+	background: rgba(0,0,0,0.1);
+}
+
+.panel div{
+	display: inline-block;
+	font-size: 1.5rem;
+	color: #ffffff;
+	padding: 0px 5px;
+	margin: 4px 2px;
+}
+
+.panel div div{
+	padding: 0px 0px;
+	margin: 0px 0px;
+}
+
+#accuracy{
+	background: rgba(20,233,255,0.5);
+}
+
+#ac{
+	color: #215156;
+}
+
+#ac11,#ac21{
+	font-size: 2rem;
+}
+
+#panelSP{
+	font-size: 2.5rem;
+	margin: -10px 3px -10px 0px;
+}
+
+#speed{
+	background: rgba(255,200,20,0.5);
+}
+
+#sp{
+	color: #614b19;
+}
+
+#sp01,#sp02{
+	font-size: 2rem;
+}
+
+#spUnit{
+	font-size: 1.1rem;
+	margin:20px 0px 0px 3px;
+}
+
+#ac2,#spUnit{
+	float:right;
+}
