@@ -61,10 +61,14 @@ body{
 }
 
 .space.char{
-	color: #888888;
+	color: #666;
 }
 .space.answerChar{
-	color: #777777;
+	color: #686868;
+}
+
+.space.mistaken.answerChar{
+	color: #555;
 }
 
 

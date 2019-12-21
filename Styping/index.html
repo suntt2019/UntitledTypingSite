@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Styping</title>
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/SourceCodePro.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="mainDisplay row">
+			<div class="col-md-10">
+				<div id="input">
+				<div class="preText">Yo...</div>
+				</div>
+				<div id="answer">
+					<div class="preText">Yo...</div>
+					<div id="ach1" class="answerChar">w</div>
+					<div id="ach2" class="answerChar">e</div>
+					<div id="ach3" class="answerChar">l</div>
+					<div id="ach4" class="answerChar">c</div>
+					<div id="ach5" class="answerChar">o</div>
+					<div id="ach6" class="answerChar">m</div>
+					<div id="ach7" class="answerChar">e</div>
+				</div>
+			</div>
+			<div class="col-md-2 panel">
+				<div id="accuracy">
+					<div id="ac" title="准确度Accuracy">Ac</div>
+					<div id="ac1" title="第一次就敲对的正确率(第二行)">
+						<!-- TODO:增加一个更好的方式显示提示信息（代替title） -->
+						<div id="ac11">100</div><div>.</div><div id="ac12">0</div>
+					</div>
+					<div id="ac2" title="提交时正确率(第一行)">
+						<div id="panelSP">/</div><div id="ac21">100</div><div>.</div><div id="ac22">0</div>
+					</div>
+				</div>
+				<div id="speed">
+					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">0</div><div>.</div><div id="sp02">0</div><div id="spUnit" title="词数/每分钟">WPM</div>
+				</div>
+			</div>
+		</div>
+		<div class="option row inactive">
+			<!-- TODO:简洁版本 -->
+			<div class="col-md-8" id="content">
+				<div class="optionTitle">内容content</div>
+				<div class="contentClass">
+					<button class="contentTitle">数字-Number</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">π</button>
+					<button class="contentDetail">date</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">词汇-words</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">NMET</button>
+					<button class="contentDetail">CET4</button>
+					<button class="contentDetail">CET6</button>
+					<button class="contentDetail">TOEFL</button>
+					<button class="contentDetail">IELTS</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">文章-Passage</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">名著</button>
+					<button class="contentDetail">新闻</button>
+					<button class="contentDetail">诗歌</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">关键词-Keywords</button>
+					|
+					<button class="contentDetail default">mixed</button>
+					<button class="contentDetail">C/C++</button>
+					<button class="contentDetail">JAVA</button>
+					<button class="contentDetail">python</button>
+					<button class="contentDetail">php</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">代码-Code</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">历史经典</button>
+					<button class="contentDetail">标准程序</button>
+					<button class="contentDetail">算法经典</button>
+				</div>
+				<div class="contentClass chosen">
+					<button class="contentTitle chosen">天书-Lorem</button>
+					|
+					<button class="contentDetail default chosen">Lorem</button>
+				</div>
+			</div>
+			<div class="col-md-4" id="part">
+				<div class="optionTitle">部分Part</div>
+				Line ??/??
+			</div>
+			<div>
+				<div class="optionTitle">设定Setting</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

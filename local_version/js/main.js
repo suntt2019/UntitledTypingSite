@@ -101,10 +101,17 @@ function nextpage(){
 }
 
 var info='welcome to yoyoyo';
+var type='test';
+var page=1;
 
 function newinfo(){
 	cnt=0;
 	$('#input').html('<div class="preText">Yo...</div>\n');
+	// $.ajax('./data/'+type+'/'+page+'.txt').done(function(data){
+	// 	console.log(data);
+	// });
+	console.log('ajax-data');
+	//$.ajax('./data/test/1.txt').done(function(data){console.log(data);});
 	//TODO: 从后端载入数据
 	answerCnt=info.length;
 	spaceCnt=0;
