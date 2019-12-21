@@ -16,10 +16,10 @@
 				</div>
 				<div id="answer">
 					<div class="preText">Yo...</div>
-					<div id="awd1" class="answerWord">a</div>
-					<div id="awd2" class="answerWord">s</div>
-					<div id="awd3" class="answerWord">d</div>
-					<div id="awd4" class="answerWord">f</div>
+					<div id="ach1" class="answerChar">a</div>
+					<div id="ach2" class="answerChar">s</div>
+					<div id="ach3" class="answerChar">d</div>
+					<div id="ach4" class="answerChar">f</div>
 				</div>
 			</div>
 			<div class="col-md-2 panel">
@@ -34,12 +34,72 @@
 					</div>
 				</div>
 				<div id="speed">
-					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">90</div><div>.</div><div id="sp02">2</div><div id="spUnit" title="词数/每分钟">WordPM</div>
+					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">0</div><div>.</div><div id="sp02">0</div><div id="spUnit" title="词数/每分钟">WPM</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-		<script src="js/main.js"></script>
+		<div class="option row inactive">
+			<!-- TODO:简洁版本 -->
+			<div class="col-md-8" id="content">
+				<div class="optionTitle">内容content</div>
+				<div class="contentClass chosen">
+					<button class="contentTitle chosen">数字-Number</button>
+					|
+					<button class="contentDetail default chosen">random</button>
+					<button class="contentDetail">π</button>
+					<button class="contentDetail">date</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">词汇-words</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">NMET</button>
+					<button class="contentDetail">CET4</button>
+					<button class="contentDetail">CET6</button>
+					<button class="contentDetail">TOEFL</button>
+					<button class="contentDetail">IELTS</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">文章-Passage</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">名著</button>
+					<button class="contentDetail">新闻</button>
+					<button class="contentDetail">诗歌</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">关键词-Keywords</button>
+					|
+					<button class="contentDetail default">mixed</button>
+					<button class="contentDetail">C/C++</button>
+					<button class="contentDetail">JAVA</button>
+					<button class="contentDetail">python</button>
+					<button class="contentDetail">php</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">代码-Code</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">历史经典</button>
+					<button class="contentDetail">标准程序</button>
+					<button class="contentDetail">算法经典</button>
+				</div>
+				<div class="contentClass">
+					<button class="contentTitle">天书-Lorem</button>
+					|
+					<button class="contentDetail default">Lorem</button>
+				</div>
+			</div>
+			<div class="col-md-4" id="part">
+				<div class="optionTitle">部分Part</div>
+				Line ??/??
+			</div>
+			<div>
+				<div class="optionTitle">设定Setting</div>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

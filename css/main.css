@@ -3,7 +3,7 @@
 }
 
 body{
-	background: #333;
+	background: #353535;
 }
 
 .container{
@@ -13,12 +13,21 @@ body{
 }
 
 .mainDisplay{
-	margin: 200px auto;
-	background: rgba(255,255,255,0.2);
+	margin: 200px 0px 20px 0px;
+	background: rgba(255,255,255,0.1);
 	padding: 20px;
 }
 
-.preText,.word,.answerWord{
+.option{
+	padding: 20px 30px;
+	margin: 20px auto;
+	max-width: 1080px;
+	color: #888;
+}
+
+
+
+.preText,.char,.answerChar{
 	display: inline-block;
 	margin: 5px -2px;
 	font-size: 1.7rem;
@@ -26,11 +35,11 @@ body{
 	font-family:Source Code Pro;
 }
 
-.word{
+.char{
 	color: #ffffff;
 }
 
-.answerWord{
+.answerChar{
 	color: #dddddd;
 }
 
@@ -38,11 +47,11 @@ body{
 	color: #ff5050 !important;
 }
 
-.word.mistaken{
+.char.mistaken{
 	color: #bbbbbb;
 }
 
-.answerWord.mistaken{
+.answerChar.mistaken{
 	color: #aaaaaa;
 	text-decoration:underline;
 }
@@ -51,10 +60,10 @@ body{
 	padding: 0px 3.586px;
 }
 
-.space.word{
+.space.char{
 	color: #888888;
 }
-.space.answerWord{
+.space.answerChar{
 	color: #777777;
 }
 
@@ -114,4 +123,62 @@ body{
 
 #ac2,#spUnit{
 	float:right;
+}
+
+
+
+
+
+#content,#part{
+	font-size: 1.1rem;
+	padding: 0px;
+}
+
+.contentClass{
+	margin: 2px 15px;
+}
+
+.contentTitle,.contentDetail{
+	display: inline-block;
+	background: transparent;
+	color: #888;
+	outline: none !important;
+}
+
+.contentTitle{
+	margin: 0px 2px;
+	border: none;
+}
+
+.contentDetail{
+	padding: 1px 2px;
+	margin: 0px 2px;
+	border: 1.5px solid;
+	border-color: transparent;
+}
+
+.contentClass.chosen{
+	color:#bbb;
+}
+
+.contentClass.chosen button{
+	color:#bbb;
+}
+
+.contentTitle.chosen{
+	font-weight: bold;
+	text-decoration:underline;
+}
+
+.contentDetail.chosen{
+	border-color: #bbb;
+}
+
+
+.option.inactive, .option.inactive div,.option.inactive div div, .option.inactive div div button{
+	color: #444 !important;
+}
+
+.option.inactive div div button.chosen{
+	border-color: #444;
 }
