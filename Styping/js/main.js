@@ -1,14 +1,16 @@
 var timerCycle=10;//ms
-var animationTime=5,timeBetweenLines=false,inputBarMode='off';//配置数据
-var cheatMode=false,spUnit='WPM-all';
+var animationTime=5,timeBetweenLines=false,inputBarMode='off',countLineBreakIntoAccuracy=false;//配置数据
+var cheatMode=false,spUnit='WPM-all',accuracyLine=false;
 var totalSpeedWPM=0,lineSpeedWPM=0,totalSpeedCPS=0,lineSpeedCPS=0,outPutSpeed=0;
 
+var infoMode='Lorem';
+
 var available=true,timems=0,timeTemp,firstChar=true;
-var cnt=0,answerCnt=7,spaceCnt=0;//该行数据
-var ac1Cnt=0,ac2Cnt=0,totalCnt=0,totalTime=0,totalWord=0;//累计数据
-var ac1Rate,ac2Rate,totalSpeedWPM;//计算出的数据
+var cnt=0,lineCnt=0,answerCnt=7,spaceCnt=0,ac1CntLine=0,ac2CntLine=0,ac1RateLine=1,ac2RateLine=1,wrongNewLine=false;//该行数据
+var ac1CntTotal=0,ac2CntTotal=0,totalCnt=0,totalTime=0,totalWord=0;//累计数据
+var ac1RateTotal=1,ac2RateTotal=1,totalSpeedWPM;//计算出的数据
 var timer=setInterval(function(){timems+=timerCycle;},timerCycle);
-var focusTimer=setInterval(function(){$('#inputBTN').focus();},100);//TODO:添加一个选择input的选项，以供虚拟键盘打字练习
+var focusTimer=setInterval(function(){$('#inputBTN').focus();},100);
 var optionActiveTimer;
 
 
@@ -32,10 +34,13 @@ function keyPressFunction(inputChar){
 		}
 	}
 	if(cnt>=answerCnt){
-		nextpage();
-		if(inputChar!=13&&inputChar!=32)//enter/space
+		if(inputChar!=13&&inputChar!=32){//enter/space
 			console.log('Incorrectly press ['+String.fromCharCode(inputChar)+'] for starting a new line');
-			//TODO:增加一个按的不是回车或空格的提示
+			$('#input').append('<div class="char prompt">['+String.fromCharCode(inputChar)+']</div>\n');
+			if(countLineBreakIntoAccuracy)
+				wrongNewLine=true;
+		}
+		nextpage();
 		return;
 	}
 	if(!keyJudge(inputChar))
@@ -84,28 +89,57 @@ function nextpage(){
 	available=false;
 	var i=0;
 	timeTemp=timems;
+	ac1CntLine=0;
+	ac2CntLine=0;
+	lineCnt=0;
+	ac1RateLine=1;
+	ac2RateLine=1;
 	var refresh=setInterval(function(){
 		i++;
+		lineCnt++;
 		totalCnt++;
-		ac1Cnt++;
-		ac2Cnt++;
+		ac1CntLine++;
+		ac2CntLine++;
+		ac1CntTotal++;
+		ac2CntTotal++;
 		$('#ch'+i).text('-');
 		$('#ch'+i).css({padding:'0px 0px'});
 		$('#ach'+i).text('-');
 		if($('#ch'+i).hasClass('wrong')){
-			ac2Cnt--;
-			ac2Rate=ac2Cnt/totalCnt;
-			$('#ac21').text(Math.floor(ac2Rate*100));
-			$('#ac22').text(Math.floor(ac2Rate*1000)%10);
+			ac2CntLine--;
+			ac2CntTotal--;
+			ac2RateLine=ac2CntLine/lineCnt;
+			ac2RateTotal=ac2CntTotal/totalCnt;
+			outputAccuracyFunction();	
 		}
 		if($('#ach'+i).hasClass('mistaken')){
-			ac1Cnt--;
-			ac1Rate=ac1Cnt/totalCnt;
-			$('#ac11').text(Math.floor(ac1Rate*100));
-			$('#ac12').text(Math.floor(ac1Rate*1000)%10);
+			ac1CntLine--;
+			ac1CntTotal--;
+			ac1RateLine=ac1CntLine/lineCnt;
+			ac1RateTotal=ac1CntTotal/totalCnt;
+			outputAccuracyFunction();
 		}
 		if(i>=answerCnt){
-			
+			ac1RateLine=ac1CntLine/lineCnt;
+			ac1RateTotal=ac1CntTotal/totalCnt;
+			ac2RateLine=ac2CntLine/lineCnt;
+			ac2RateTotal=ac2CntTotal/totalCnt;
+			outputAccuracyFunction();
+
+			//newline
+			if(wrongNewLine){
+				lineCnt++;
+				totalCnt++;
+				ac1RateLine=ac1CntLine/lineCnt;
+				ac1RateTotal=ac1CntTotal/totalCnt;
+				ac2RateLine=ac2CntLine/lineCnt;
+				ac2RateTotal=ac2CntTotal/totalCnt;
+				outputAccuracyFunction();
+			}
+
+
+			wrongNewLine=false;
+
 			totalWord+=spaceCnt+1;
 			totalTime+=timeTemp;
 			lineSpeedWPM=(spaceCnt+1)/timeTemp*60000;
@@ -115,21 +149,14 @@ function nextpage(){
 			
 			outputSpeedFunction();
 
-			//if(!timeBetweenLines)
-				firstChar=true;
-			//TODO:换单位/换单次记速，绘制图表...
+			firstChar=true;
+			//TODO:绘制图表...
 			view();
 			if(page>=9)
 				page=0;
 			page++;
-			//ajax加载时按键切到下一页
-			$.ajax('./data/test/'+page+'.txt').done(function(data){
-				info=data;
-				newinfo();
-				available=true;
-				timems=0;
-			});
-			clearInterval(refresh);
+			generateNewInfoFunction();
+;			clearInterval(refresh);
 		}
 	},animationTime);
 	return;
@@ -157,6 +184,25 @@ function outputSpeedFunction(){
 	// console.log('totalSpeedCPS',totalSpeedCPS,'lineSpeedCPS',lineSpeedCPS);
 }
 
+function outputAccuracyFunction(){
+	if(accuracyLine){
+		$('#ac11').text(Math.floor(ac1RateLine*100));
+		$('#ac12').text(Math.floor(ac1RateLine*1000)%10);
+		$('#ac21').text(Math.floor(ac2RateLine*100));
+		$('#ac22').text(Math.floor(ac2RateLine*1000)%10);
+	}else{
+		$('#ac11').text(Math.floor(ac1RateTotal*100));
+		$('#ac12').text(Math.floor(ac1RateTotal*1000)%10);
+		$('#ac21').text(Math.floor(ac2RateTotal*100));
+		$('#ac22').text(Math.floor(ac2RateTotal*1000)%10);
+	}
+	console.log(accuracyLine);
+	console.log('Line',ac1RateLine,ac2RateLine);
+	console.log(ac1CntLine,ac2CntLine,lineCnt);
+	console.log('Total',ac1RateTotal,ac2RateTotal);
+	console.log(ac1CntTotal,ac2CntTotal,totalCnt);
+	return;
+}
 
 
 var info='welcome to yoyoyo';
@@ -166,9 +212,6 @@ var page=0;
 function newinfo(){
 	cnt=0;
 	$('#input').html('<div class="preText">Yo...</div>\n');
-	
-
-	//TODO: 从后端载入数据
 	answerCnt=info.length;
 	spaceCnt=0;
 	$('#answer').html('<div class="preText">Yo...</div>\n');
@@ -181,6 +224,8 @@ function newinfo(){
 			$('#answer').append('<div id="ach'+i+'" class="answerChar">'+info[i-1]+'</div>\n');
 
 	}
+	available=true;
+	timems=0;
 	//$('#answer').html('<div class="preText">Yo...</div>\n<div id="ach1" class="answerChar">a</div>\n<div id="ach2" class="answerChar">s</div>\n<div id="ach3" class="answerChar">d</div>\n<div id="ach4" class="answerChar">f</div>');
 	return;
 }
@@ -189,8 +234,8 @@ function newinfo(){
 function view(){
 	console.log('===============view===============');
 	console.log('[Accuracy]');
-	console.log('totalCnt',totalCnt,'ac1Cnt',ac1Cnt,'ac2Cnt',ac2Cnt);
-	console.log('ac1Rate',ac1Rate,'ac2Rate',ac2Rate);
+	console.log('totalCnt',totalCnt,'ac1CntTotal',ac1CntTotal,'ac2CntTotal',ac2CntTotal);
+	console.log('ac1RateTotal',ac1RateTotal,'ac2RateTotal',ac2RateTotal);
 	console.log('[Speed]');
 	console.log('totalWord',totalWord,'totalTime',totalTime);
 	console.log('totalSpeedWPM',totalSpeedWPM);
@@ -205,22 +250,31 @@ function keyJudge(keynum) {
 }
 
 $('.contentDetail').on('click',function(){
+	if($(this).hasClass('unusable'))
+		return;
 	$(this).parent().parent().find('.contentClass').removeClass('chosen');
 	$(this).parent().parent().find('.contentTitle').removeClass('chosen');
 	$(this).parent().parent().find('.contentDetail').removeClass('chosen');
 	$(this).parent().addClass('chosen');
 	$(this).parent().find('.contentTitle').addClass('chosen');
 	$(this).addClass('chosen');
+	infoMode=$(this).parent().attr('className')+'_'+$(this).text();
+	//console.log(infoMode);
 	optionActivefunction();
 })
 
 $('.contentTitle').on('click',function(){
+	if($(this).hasClass('unusable'))
+		return;
 	$(this).parent().parent().find('.contentClass').removeClass('chosen');
 	$(this).parent().parent().find('.contentTitle').removeClass('chosen');
 	$(this).parent().parent().find('.contentDetail').removeClass('chosen');
 	$(this).parent().addClass('chosen');
 	$(this).addClass('chosen');
 	$(this).parent().find('.contentDetail.default').addClass('chosen');
+	infoMode=$(this).parent().attr('className')+'_'
+	+$(this).parent().find('.contentDetail.default').text();
+	//console.log(infoMode);
 	optionActivefunction();
 })
 
@@ -346,5 +400,85 @@ $('#timeBetweenLines').on('click',function(){
 		$('#timeBetweenLines').addClass('active');
 	}
 	timeBetweenLines=!timeBetweenLines;
+});
+
+$('#countLineBreakIntoAccuracy').on('click',function(){
+	if(countLineBreakIntoAccuracy){
+		$('#countLineBreakIntoAccuracy').removeClass('active');
+	}else{
+		$('#countLineBreakIntoAccuracy').addClass('active');
+	}
+	countLineBreakIntoAccuracy=!countLineBreakIntoAccuracy;
+	return;
+});
+
+$('#ac').on('click',function(){
+	if(accuracyLine){
+		$('#ac').text('Aca');
+		$('#ac').attr('title','正确率AccuracyAll(总计)');
+	}else{
+		$('#ac').text('Acl');
+		$('#ac').attr('title','正确率AccuracyLine(单行)');
+	}
+	accuracyLine=!accuracyLine;
+	outputAccuracyFunction();
+	return;
 })
 
+var maxLength=45;
+function generateNewInfoFunction(){
+	info='';
+	switch(infoMode){
+		case 'lorem_Lorem':
+			$.ajax('./data/'+infoMode+'/'+page+'.txt').done(function(data){
+				info=data;
+				newinfo();
+			});
+			break;
+		case 'number_random':
+			var numberLength,firstNumber=true;
+			//console.log(info,info.length);
+			while(info.length<=maxLength){
+				numberLength=Math.floor(Math.random()*4)+3;
+				if(numberLength+info.length>maxLength)
+					break;
+				if(!firstNumber)
+					info=info+' ';
+				else
+					firstNumber=false;
+				info=info+Math.floor(Math.random()*Math.pow(10,numberLength))+'';
+			}
+			firstNumber=true;
+			newinfo();
+			break;
+		case 'number_π':
+
+		case 'number_date':
+			var firstNumber=true,year,month,day,date;
+			while(info.length<=maxLength){
+				year=Math.floor(Math.random()*60)+1970;
+				month=Math.floor(Math.random()*12)+1;
+				if(month==4||month==6||month==9||month==11)
+					day=Math.floor(Math.random()*30)+1;
+				else if(month==2&&((year%4==0&&year%100!=0)||year%400==0))
+					day=Math.floor(Math.random()*29)+1;
+				else if(month==2)
+					day=Math.floor(Math.random()*28)+1;
+				else
+					day=Math.floor(Math.random()*31)+1;
+				date=year+'-'+month+'-'+day;
+				//console.log(year,month,day,date);
+				if(date.length+info.length>maxLength)
+					break;
+				if(!firstNumber)
+					info=info+' ';
+				else
+					firstNumber=false;
+				info=info+date;
+				newinfo();
+			}
+	}
+	console.log(infoMode);
+	console.log(info);
+	return;	
+}

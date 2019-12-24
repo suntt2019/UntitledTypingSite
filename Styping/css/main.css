@@ -43,7 +43,7 @@ body{
 	color: #dddddd;
 }
 
-.wrong{
+.wrong,.prompt{
 	color: #ff5050 !important;
 }
 
@@ -92,10 +92,14 @@ body{
 }
 
 #accuracy{
+	padding: 0px 2.5px;
 	background: rgba(20,233,255,0.5);
 }
 
 #ac{
+	padding: 0px;
+	background: transparent;
+	border: none;
 	color: #215156;
 }
 
@@ -165,6 +169,11 @@ body{
 	border-color: transparent;
 }
 
+.contentDetail.unusable{
+	text-decoration: line-through;
+	color: #666;
+}
+
 .contentClass.chosen{
 	color:#bbb;
 }
@@ -217,3 +226,4 @@ body{
 .option.inactive div button.active{
 	border-color: #444;
 }
+

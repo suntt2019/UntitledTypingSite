@@ -32,7 +32,7 @@
 			</div>
 			<div class="col-md-2 panel">
 				<div id="accuracy">
-					<div id="ac" title="准确度Accuracy">Ac</div>
+					<button id="ac" title="准确度AccuracyAll(总计)">Aca</button>
 					<div id="ac1" title="第一次就敲对的正确率(第二行)">
 						<!-- TODO:增加一个更好的方式显示提示信息（代替title） -->
 						<div id="ac11">100</div><div>.</div><div id="ac12">0</div>
@@ -50,49 +50,49 @@
 			<!-- TODO:简洁版本 -->
 			<div class="col-md-8" id="content">
 				<div class="optionTitle">内容content</div>
-				<div class="contentClass">
+				<div class="contentClass" className="number">
 					<button class="contentTitle">数字-Number</button>
 					|
 					<button class="contentDetail default">random</button>
-					<button class="contentDetail">π</button>
+					<button class="contentDetail unusable">π</button>
 					<button class="contentDetail">date</button>
 				</div>
-				<div class="contentClass">
-					<button class="contentTitle">词汇-words</button>
+				<div class="contentClass" className="words">
+					<button class="contentTitle unusable">词汇-words</button>
 					|
-					<button class="contentDetail default">random</button>
-					<button class="contentDetail">NMET</button>
-					<button class="contentDetail">CET4</button>
-					<button class="contentDetail">CET6</button>
-					<button class="contentDetail">TOEFL</button>
-					<button class="contentDetail">IELTS</button>
+					<button class="contentDetail default unusable">random</button>
+					<button class="contentDetail unusable">NMET</button>
+					<button class="contentDetail unusable">CET4</button>
+					<button class="contentDetail unusable">CET6</button>
+					<button class="contentDetail unusable">TOEFL</button>
+					<button class="contentDetail unusable">IELTS</button>
 				</div>
-				<div class="contentClass">
-					<button class="contentTitle">文章-Passage</button>
+				<div class="contentClass" className="passage">
+					<button class="contentTitle unusable">文章-Passage</button>
 					|
-					<button class="contentDetail default">random</button>
-					<button class="contentDetail">名著</button>
-					<button class="contentDetail">新闻</button>
-					<button class="contentDetail">诗歌</button>
+					<button class="contentDetail default unusable">random</button>
+					<button class="contentDetail unusable">名著</button>
+					<button class="contentDetail unusable">新闻</button>
+					<button class="contentDetail unusable">诗歌</button>
 				</div>
-				<div class="contentClass">
-					<button class="contentTitle">关键词-Keywords</button>
+				<div class="contentClass" className="keywords">
+					<button class="contentTitle unusable">关键词-Keywords</button>
 					|
-					<button class="contentDetail default">mixed</button>
-					<button class="contentDetail">C/C++</button>
-					<button class="contentDetail">JAVA</button>
-					<button class="contentDetail">python</button>
-					<button class="contentDetail">php</button>
+					<button class="contentDetail default unusable">mixed</button>
+					<button class="contentDetail unusable">C/C++</button>
+					<button class="contentDetail unusable">JAVA</button>
+					<button class="contentDetail unusable">python</button>
+					<button class="contentDetail unusable">php</button>
 				</div>
-				<div class="contentClass">
-					<button class="contentTitle">代码-Code</button>
+				<div class="contentClass" className="code">
+					<button class="contentTitle unusable">代码-Code</button>
 					|
-					<button class="contentDetail default">random</button>
-					<button class="contentDetail">历史经典</button>
-					<button class="contentDetail">标准程序</button>
-					<button class="contentDetail">算法经典</button>
+					<button class="contentDetail default unusable">random</button>
+					<button class="contentDetail unusable">历史经典</button>
+					<button class="contentDetail unusable">标准程序</button>
+					<button class="contentDetail unusable">算法经典</button>
 				</div>
-				<div class="contentClass chosen">
+				<div class="contentClass chosen" className="lorem">
 					<button class="contentTitle chosen">天书-Lorem</button>
 					|
 					<button class="contentDetail default chosen">Lorem</button>
@@ -115,6 +115,9 @@
 				<button class="settingButton" id="cheatMode">cheatMode</button>
 				<button class="settingButton" id="timeBetweenLines">
 					timeBetweenLines
+				</button>
+				<button class="settingButton" id="countLineBreakIntoAccuracy">
+					countLineBreakIntoAccuracy
 				</button>
 			</div>
 		</div>
