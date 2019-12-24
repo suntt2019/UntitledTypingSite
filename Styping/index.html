@@ -9,6 +9,11 @@
 </head>
 <body>
 	<div class="container">
+		<form>
+			<input type="text" id="inputBar">
+			<input type="submit" id="inputSubmitButton" value="submit">
+		</form>
+		<button id="inputBTN">inputBTN</button>
 		<div class="mainDisplay row">
 			<div class="col-md-10">
 				<div id="input">
@@ -37,7 +42,7 @@
 					</div>
 				</div>
 				<div id="speed">
-					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">0</div><div>.</div><div id="sp02">0</div><div id="spUnit" title="词数/每分钟">WPM</div>
+					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">0</div><div>.</div><div id="sp02">0</div><button id="spUnit" title="词数/每分钟(总计)">WPM-all</button>
 				</div>
 			</div>
 		</div>
@@ -99,6 +104,18 @@
 			</div>
 			<div>
 				<div class="optionTitle">设定Setting</div>
+				<div class="btnGroup">
+					<button class="settingButton" id="inputBarMode-event">
+						inputBarMode-event
+					</button>
+					<button class="settingButton" id="inputBarMode-content">
+						inputBarMode-content
+					</button>
+				</div>
+				<button class="settingButton" id="cheatMode">cheatMode</button>
+				<button class="settingButton" id="timeBetweenLines">
+					timeBetweenLines
+				</button>
 			</div>
 		</div>
 	</div>

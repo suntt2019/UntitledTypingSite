@@ -121,8 +121,12 @@ body{
 }
 
 #spUnit{
-	font-size: 1.1rem;
+	font-size: 1rem;
 	margin:20px 0px 0px 3px;
+	background: transparent;
+	color: #fff;
+	border-color: transparent;
+	outline: none !important;
 }
 
 #ac2,#spUnit{
@@ -179,10 +183,37 @@ body{
 }
 
 
-.option.inactive, .option.inactive div,.option.inactive div div, .option.inactive div div button{
+.option.inactive, .option.inactive div,.option.inactive div div,
+.option.inactive div button, .option.inactive div div button{
 	color: #444 !important;
 }
 
 .option.inactive div div button.chosen{
+	border-color: #444;
+}
+
+#inputBar,#inputBTN,#inputSubmitButton{
+	background:transparent;
+	color:transparent;
+	border-color: transparent;
+	outline: none !important;
+}
+
+
+.settingButton{
+	background: transparent;
+	color: #888;
+	border: 2px solid;
+	border-color: transparent;
+	outline: none !important;
+}
+
+.settingButton.active{
+	color: #888;
+	border-color: #888;
+}
+
+.option.inactive div div button.active,
+.option.inactive div button.active{
 	border-color: #444;
 }
