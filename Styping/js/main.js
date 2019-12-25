@@ -3,7 +3,7 @@ var animationTime=5,timeBetweenLines=false,inputBarMode='off',countLineBreakInto
 var cheatMode=false,spUnit='WPM-all',accuracyLine=false;
 var totalSpeedWPM=0,lineSpeedWPM=0,totalSpeedCPS=0,lineSpeedCPS=0,outPutSpeed=0;
 
-var infoMode='Lorem';
+var infoMode='lorem_Lorem';
 
 var available=true,timems=0,timeTemp,firstChar=true;
 var cnt=0,lineCnt=0,answerCnt=7,spaceCnt=0,ac1CntLine=0,ac2CntLine=0,ac1RateLine=1,ac2RateLine=1,wrongNewLine=false;//该行数据
@@ -152,11 +152,8 @@ function nextpage(){
 			firstChar=true;
 			//TODO:绘制图表...
 			view();
-			if(page>=9)
-				page=0;
-			page++;
 			generateNewInfoFunction();
-;			clearInterval(refresh);
+			clearInterval(refresh);
 		}
 	},animationTime);
 	return;
@@ -260,6 +257,7 @@ $('.contentDetail').on('click',function(){
 	$(this).addClass('chosen');
 	infoMode=$(this).parent().attr('className')+'_'+$(this).text();
 	//console.log(infoMode);
+	infoBaseReadyFunction(infoMode);
 	optionActivefunction();
 })
 
@@ -275,6 +273,7 @@ $('.contentTitle').on('click',function(){
 	infoMode=$(this).parent().attr('className')+'_'
 	+$(this).parent().find('.contentDetail.default').text();
 	//console.log(infoMode);
+	infoBaseReadyFunction(infoMode);
 	optionActivefunction();
 })
 
@@ -425,7 +424,7 @@ $('#ac').on('click',function(){
 	return;
 })
 
-var maxLength=45;
+var maxLength=55,pageOfPi=1,infoPointer=0,infoBase,infoBaseLength,infoBaseTemp='';
 function generateNewInfoFunction(){
 	info='';
 	switch(infoMode){
@@ -451,8 +450,42 @@ function generateNewInfoFunction(){
 			firstNumber=true;
 			newinfo();
 			break;
-		case 'number_π':
-
+		case 'number_π':case 'passage_诗歌':
+			var i,k;
+			for(i=0;i<maxLength;i++){
+				info=info+infoBase[infoPointer+i];
+				if(infoMode=='number_π'&&i%5==4&&i!=maxLength-1)
+					info=info+' ';
+				//console.log('[info]',infoPointer,i,info);
+			}
+			k=i;
+			while(k>0&&info[k]!=' ')
+				k--;
+			if(!k)
+				k=i;
+			else
+				infoPointer++;
+			infoPointer+=k;
+			info=info.substring(0,k);
+			newinfo();
+			if(infoBaseLength<infoPointer+maxLength){
+				available=false;
+				console.log('[Load]','info',info,'infoBase',infoBase,'infoBaseTemp',infoBaseTemp);
+				$.ajax('./data/'+infoMode+'/'+infoMode+'_'+page+'.txt').done(function(data){
+					infoBaseTemp=infoBase.substring(infoPointer,infoBaseLength);
+					infoBase=infoBaseTemp+data;
+					infoBaseLength=infoBase.length;
+					infoBaseTemp='';
+					infoPointer=0;
+					console.log('[Load]','info',info,'infoBase',infoBase,'infoBaseTemp',infoBaseTemp);
+					page++;
+					if(page>pageMax(infoMode))
+						page=0;
+					available=true;
+				});
+			}
+			
+			break;
 		case 'number_date':
 			var firstNumber=true,year,month,day,date;
 			while(info.length<=maxLength){
@@ -481,4 +514,32 @@ function generateNewInfoFunction(){
 	console.log(infoMode);
 	console.log(info);
 	return;	
+}
+
+
+
+function infoBaseReadyFunction(infoMode){
+	page=0;
+	infoBase=='';
+	available=false;
+	infoPointer=0;
+	console.log('[infoBase-load]',infoMode);
+	if(infoMode=='number_π'||infoMode=='passage_诗歌'){
+		$.ajax('./data/'+infoMode+'/'+infoMode+'_'+page+'.txt').done(function(data){
+			infoBase=data;
+			infoBaseLength=infoBase.length;
+			page++;
+			available=true;
+		});
+	}else{
+		available=true;
+	}
+	return;
+}
+
+function pageMax(infoMode){//文本最后记得加一个空格
+	switch(infoMode){
+		case 'number_π':return 9;
+		case 'passage_诗歌':return 1;
+	}
 }
