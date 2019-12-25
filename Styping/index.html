@@ -17,10 +17,10 @@
 		<div class="mainDisplay row">
 			<div class="col-md-10">
 				<div id="input">
-				<div class="preText">Yo...</div>
+				<div class="preText" title="你输入的">>&nbsp;</div>
 				</div>
 				<div id="answer">
-					<div class="preText">Yo...</div>
+					<div class="preText" title="你要输入的">>&nbsp;</div>
 					<div id="ach1" class="answerChar">w</div>
 					<div id="ach2" class="answerChar">e</div>
 					<div id="ach3" class="answerChar">l</div>
@@ -98,27 +98,42 @@
 					<button class="contentDetail default chosen">Lorem</button>
 				</div>
 			</div>
-			<div class="col-md-4" id="part">
-				<div class="optionTitle">部分Part</div>
-				Line ??/??
-			</div>
-			<div>
+			<div class="col-md-4" id="setting">
 				<div class="optionTitle">设定Setting</div>
-				<div class="btnGroup">
-					<button class="settingButton" id="inputBarMode-event">
-						inputBarMode-event
+				<div class="settingClass">
+					<div class="settingTitle" title="动画时间长度(每个字符)">虚拟键盘输入</div>
+					<div class="btnGroup">
+						<button class="settingButton" id="inputBarMode-content">
+							开启(推荐)
+						</button>
+						<button class="settingButton" id="inputBarMode-event">
+							开启(备用)
+						</button>
+					</div>
+				</div>
+				<div class="settingClass">
+					<div class="settingTitle" title="换行相关的时间/输入是否计入准确度和速度的统计">换行是否计入统计</div>
+					<button class="settingButton" id="timeBetweenLines" title="输入两行之间的间隙时间也计入速度计算用的计时">
+						两行间空闲时间
 					</button>
-					<button class="settingButton" id="inputBarMode-content">
-						inputBarMode-content
+					<button class="settingButton" id="countLineBreakIntoAccuracy" title="打完一行后不以空格/回车结束则视为一个错误输入">
+						换行符
 					</button>
 				</div>
-				<button class="settingButton" id="cheatMode">cheatMode</button>
-				<button class="settingButton" id="timeBetweenLines">
-					timeBetweenLines
-				</button>
-				<button class="settingButton" id="countLineBreakIntoAccuracy">
-					countLineBreakIntoAccuracy
-				</button>
+				<div class="settingClass">
+					<div class="settingTitle" title="动画时间长度(每个字符)">过场动画时间(每个字符)</div>
+					<button class="settingButton" id="animationTimeMinus" title="动画时间长度减短">					-1ms
+					</button>
+					<input type="text" id="animationTime" title="动画时间长度(每个字符)" readonly  unselectable="on" value="5">
+					<div>
+						ms
+					</div>
+					<button class="settingButton" id="animationTimePlus" title="动画时间长度延长">					+1ms
+					</button>
+				</div>
+				<div class="settingClass hide">
+					<button class="settingButton" id="cheatMode">cheatMode</button>
+				</div>
 			</div>
 		</div>
 	</div>

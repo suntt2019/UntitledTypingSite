@@ -21,11 +21,14 @@ body{
 .option{
 	padding: 20px 30px;
 	margin: 20px auto;
-	max-width: 1080px;
-	color: #888;
+	max-width: 1200px;
+	color: #999;
 }
 
-
+.optionTitle{
+	font-size: 1.3rem;
+	font-weight: bold;
+}
 
 .preText,.char,.answerChar{
 	display: inline-block;
@@ -153,7 +156,7 @@ body{
 .contentTitle,.contentDetail{
 	display: inline-block;
 	background: transparent;
-	color: #888;
+	color: #999;
 	outline: none !important;
 }
 
@@ -193,12 +196,13 @@ body{
 
 
 .option.inactive, .option.inactive div,.option.inactive div div,
-.option.inactive div button, .option.inactive div div button{
-	color: #444 !important;
+.option.inactive div button, .option.inactive div div button,
+.option.inactive div input{
+	color: #555 !important;
 }
 
 .option.inactive div div button.chosen{
-	border-color: #444;
+	border-color: #555;
 }
 
 #inputBar,#inputBTN,#inputSubmitButton{
@@ -208,22 +212,55 @@ body{
 	outline: none !important;
 }
 
-
 .settingButton{
 	background: transparent;
-	color: #888;
+	color: #999;
 	border: 2px solid;
 	border-color: transparent;
 	outline: none !important;
 }
 
 .settingButton.active{
-	color: #888;
-	border-color: #888;
+	color: #999;
+	border-color: #999;
+}
+
+#animationTime{
+	width: 50px;
+	border: 1px solid;
+	border-color: #999;
+	background: transparent;
+	color: #999;
+	outline: none !important;
+	text-align:center;
 }
 
 .option.inactive div div button.active,
-.option.inactive div button.active{
-	border-color: #444;
+.option.inactive div button.active,
+.option.inactive div #animationTime,
+.option.inactive div{
+	border-color: #555;
 }
 
+#setting div{
+	display: inline-block;
+}
+
+#cheatMode{
+	display: none;
+}
+
+.hide{
+	display: none !important;
+}
+
+.settingClass{
+	margin: 5px 20px;
+	padding: 5px 30px;
+	border: 1px solid;
+	border-color: #555;
+}
+.settingTitle{
+	display: block !important;
+	margin: 0px -20px;
+}

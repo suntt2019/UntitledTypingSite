@@ -1,9 +1,10 @@
 var timerCycle=10;//ms
-var animationTime=5,timeBetweenLines=false,inputBarMode='off',countLineBreakIntoAccuracy=false;//配置数据
+var animationTime=5,animationTimeStep=1,timeBetweenLines=false,inputBarMode='off',countLineBreakIntoAccuracy=false;//配置数据
 var cheatMode=false,spUnit='WPM-all',accuracyLine=false;
 var totalSpeedWPM=0,lineSpeedWPM=0,totalSpeedCPS=0,lineSpeedCPS=0,outPutSpeed=0;
 
 var infoMode='lorem_Lorem';
+var info='happy new year';
 
 var available=true,timems=0,timeTemp,firstChar=true;
 var cnt=0,lineCnt=0,answerCnt=7,spaceCnt=0,ac1CntLine=0,ac2CntLine=0,ac1RateLine=1,ac2RateLine=1,wrongNewLine=false;//该行数据
@@ -11,7 +12,8 @@ var ac1CntTotal=0,ac2CntTotal=0,totalCnt=0,totalTime=0,totalWord=0;//累计数�
 var ac1RateTotal=1,ac2RateTotal=1,totalSpeedWPM;//计算出的数据
 var timer=setInterval(function(){timems+=timerCycle;},timerCycle);
 var focusTimer=setInterval(function(){$('#inputBTN').focus();},100);
-var optionActiveTimer;
+var optionActiveTimer,boom=false;
+
 
 
 $(document).on('keypress',null,null,function(e){
@@ -202,16 +204,14 @@ function outputAccuracyFunction(){
 }
 
 
-var info='welcome to yoyoyo';
-var type='test';
 var page=0;
 
 function newinfo(){
 	cnt=0;
-	$('#input').html('<div class="preText">Yo...</div>\n');
+	$('#input').html('<div class="preText" title="你输入的">>&nbsp;</div>\n');
 	answerCnt=info.length;
 	spaceCnt=0;
-	$('#answer').html('<div class="preText">Yo...</div>\n');
+	$('#answer').html('<div class="preText" title="你要输入的">>&nbsp;</div>\n');
 	for(var i=1;i<=answerCnt;i++){
 		if(info[i-1]==' '){
 			$('#answer').append('<div id="ach'+i+'" class="answerChar space">␣</div>\n');
@@ -543,3 +543,76 @@ function pageMax(infoMode){//文本最后记得加一个空格
 		case 'passage_诗歌':return 1;
 	}
 }
+
+
+$('#animationTimeMinus').on('click',function(){
+	animationTime-=animationTimeStep;
+	animationTimeUpadteFunction();
+});
+
+$('#animationTimePlus').on('click',function(){
+	if(boom)
+		return;
+	animationTime+=animationTimeStep;
+	animationTimeUpadteFunction();
+});
+
+function animationTimeUpadteFunction(){
+	if(boom)
+		return;
+	if(animationTime<0){
+		animationTime=0;
+	}
+	switch(Math.floor(animationTime/10)){
+		case 0:
+			animationTimeStep=1;
+			break;
+		case 1:
+			animationTimeStep=2;
+			break;
+		case 2:case 3:case 4:
+			animationTimeStep=5;
+			break;
+		case 5:case 6:case 7:case 8:case 9:
+			animationTimeStep=10;
+			break;
+		default:
+			animationTimeStep=20;
+			break;
+	}
+	if(animationTime>=1000)
+		animationTimeStep=500;
+	else if(animationTime>=500)
+		animationTimeStep=100;
+	else if(animationTime>=300)
+		animationTimeStep=50;
+	$('#animationTimeMinus').text('-'+animationTimeStep+'ms');
+	$('#animationTimePlus').text('+'+animationTimeStep+'ms');
+	$('#animationTime').val(animationTime);
+	if(animationTime>20000){
+		animationTime=20000;
+		$('#animationTimePlus').text('BOOM!!!');
+		$('#animationTimePlus').css('color','#fff');
+		$('#animationTimeMinus').css('font-size','0.2rem');
+		$('#animationTime').css('font-size','0.2rem');
+		$('#animationTimePlus').css('font-size','1.6rem');
+		$('#cheatMode').css('display','inline-block');
+		$('.hide').removeClass('hide');
+		$('#cheatMode').css('color','#ccc');
+		boom=true;
+		setTimeout(function(){
+			$('#animationTimePlus').text('+'+animationTimeStep+'ms');
+			$('#animationTimePlus').css('color','#999');
+			$('#animationTimePlus').css('font-size','1rem');
+			$('#animationTimeMinus').css('font-size','1rem');
+			$('#animationTime').css('font-size','1rem');
+			$('#cheatMode').css('color','#999');
+			boom=false;
+		},2000);
+	}
+	return;
+}
+
+$('.settingButton').on('click',function(){
+	optionActivefunction();
+});
