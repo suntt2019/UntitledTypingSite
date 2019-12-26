@@ -68,13 +68,13 @@
 					<button class="contentDetail unusable">TOEFL</button>
 					<button class="contentDetail unusable">IELTS</button>
 				</div>
-				<div class="contentClass" className="passage">
-					<button class="contentTitle unusable">文章-Passage</button>
+				<div class="contentClass chosen" className="passage">
+					<button class="contentTitle chosen">文章-Passage</button>
 					|
-					<button class="contentDetail default unusable">random</button>
+					<button class="contentDetail unusable">random</button>
 					<button class="contentDetail unusable">名著</button>
 					<button class="contentDetail unusable">新闻</button>
-					<button class="contentDetail">诗歌</button>
+					<button class="contentDetail default chosen">诗歌</button>
 				</div>
 				<div class="contentClass" className="keywords">
 					<button class="contentTitle unusable">关键词-Keywords</button>
@@ -93,21 +93,21 @@
 					<button class="contentDetail unusable">标准程序</button>
 					<button class="contentDetail unusable">算法经典</button>
 				</div>
-				<div class="contentClass chosen" className="lorem">
-					<button class="contentTitle chosen">天书-Lorem</button>
+				<div class="contentClass" className="lorem">
+					<button class="contentTitle">天书-Lorem</button>
 					|
-					<button class="contentDetail default chosen">Lorem</button>
+					<button class="contentDetail default">Lorem</button>
 				</div>
 			</div>
 			<div class="col-md-4" id="setting">
 				<div class="optionTitle">设置Setting</div>
 				<div class="settingClass">
-					<div class="settingTitle" title="动画时间长度(每个字符)">虚拟键盘输入</div>
+					<div class="settingTitle" title="是否开启虚拟键盘输入(仅移动端设备有效)">虚拟键盘输入</div>
 					<div class="btnGroup">
-						<button class="settingButton" id="inputBarMode-content">
+						<button class="settingButton" id="inputBarMode-content" title="推荐的虚拟键盘输入检测方式(输入内容检测)，适用于大多数情况">
 							开启(推荐)
 						</button>
-						<button class="settingButton" id="inputBarMode-event">
+						<button class="settingButton" id="inputBarMode-event" title="备用的虚拟键盘输入检测方式(输入事件检测)，用于推荐方式无法使用的情况">
 							开启(备用)
 						</button>
 					</div>
@@ -138,15 +138,21 @@
 			</div>
 		</div>
 		<div id="footer">
-			<div>
 				<div>
 					<button id="helpButton" title="点击显示帮助和反馈栏">帮助help · 反馈feedback</button>
-					<br>
-					<img src="./img/help.png" id="helpImage">
-					<input type="text" name="feedback" id="feedback">
-					<button id="feedbackButton">提交</button>
+					<div id="helpFeedback" class="row">
+						<div class="col-md-6">
+							<img src="./img/help.png" id="helpImage">
+							帮助help
+						</div>
+						<div class="col-md-6">
+							<div id="feedbackTitle">反馈feedback</div>
+							<textarea rows="4" cols="40" name="feedback" id="feedback"></textarea>
+							<div id="feedbackReminder">&nbsp;</div>
+							<button id="feedbackButton">提交</button>
+						</div>
+					</div>
 				</div>
-			</div>
 			<div>©2019 sun123t2.com All rights reserved.</div>
 		</div>
 	</div>

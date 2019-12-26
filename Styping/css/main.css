@@ -272,9 +272,13 @@ body{
 	bottom:0;
 }
 
-#helpImage,#feedback,#feedbackButton{
-	display: none;
+/*#feedbackClass,#feedbackReminder{
+	display: inline-block;
 }
+
+#helpImage,#feedback,#feedbackButton,#feedbackBr,#feedbackReminder,#feedbackTitle{
+	display: none;
+}*/
 
 #helpButton{
 	background: transparent;
@@ -282,3 +286,58 @@ body{
 	border: none;
 	outline: none !important;
 }
+
+#helpFeedback{
+	display: none;
+	margin: 2px auto;
+	max-width: 1000px;
+}
+
+#helpFeedback div{
+	color: #999;
+	display: inline-block;
+	margin: 0px;
+	max-width: 400px;
+}
+
+#helpFeedback div div{
+	display: block;
+}
+
+#feedback{
+	background: transparent;
+	outline: none !important;
+	color: #999;
+	border-color: #999;
+}
+
+#feedbackButton{
+	outline: none !important;
+	color: #353535;
+	border: 1px solid;
+	border-color: #999;
+	background: rgba(255,255,255,0.4);
+}
+/*#feedbackClass{
+	color: #999;
+}
+
+#feedback,#feedbackButton{
+	margin: 3px 2px;
+	background: transparent;
+	color: #999;
+	border: 1px solid;
+	border-color: #555;
+	outline: none !important;
+}
+
+#feedbackButton{
+	background: rgba(255,255,255,0.1);
+}
+
+.helpFeedbackContainer{
+	display: none;
+	margin: 0px auto; 
+	max-width: 2000px;
+}
+*/

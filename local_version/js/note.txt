@@ -1,5 +1,17 @@
 //NOTE
 
+帮助图片
+
+统计数据符号说明：
+Aca(AccuracyAll):总体正确率
+Acl(AccuracyLine):该行正确率
+
+WPM:词数每分钟  -all:总体速度
+CPS:字符数每秒  -line：该行速度
+
+将鼠标放在不理解的内容上面，会有提示
+(详细说明点击该图片可见)
+
 /*
 12.3数据类型
 Number NaN Infinty

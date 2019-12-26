@@ -3,7 +3,7 @@ var animationTime=5,animationTimeStep=1,timeBetweenLines=false,inputBarMode='off
 var cheatMode=false,spUnit='WPM-all',accuracyLine=false;
 var totalSpeedWPM=0,lineSpeedWPM=0,totalSpeedCPS=0,lineSpeedCPS=0,outPutSpeed=0;
 
-var infoMode='lorem_Lorem';
+var infoMode='passage_诗歌';
 var info='happy new year';
 //var logTimer=setInterval(function(){console.log('[logTimer]',$('#input').width());},1000);
 
@@ -197,11 +197,11 @@ function outputAccuracyFunction(){
 		$('#ac21').text(Math.floor(ac2RateTotal*100));
 		$('#ac22').text(Math.floor(ac2RateTotal*1000)%10);
 	}
-	console.log(accuracyLine);
-	console.log('Line',ac1RateLine,ac2RateLine);
-	console.log(ac1CntLine,ac2CntLine,lineCnt);
-	console.log('Total',ac1RateTotal,ac2RateTotal);
-	console.log(ac1CntTotal,ac2CntTotal,totalCnt);
+	// console.log(accuracyLine);
+	// console.log('Line',ac1RateLine,ac2RateLine);
+	// console.log(ac1CntLine,ac2CntLine,lineCnt);
+	// console.log('Total',ac1RateTotal,ac2RateTotal);
+	// console.log(ac1CntTotal,ac2CntTotal,totalCnt);
 	return;
 }
 
@@ -432,12 +432,6 @@ function generateNewInfoFunction(){
 	maxLength=Math.floor($('#input').width()/18)-2;
 	info='';
 	switch(infoMode){
-		case 'lorem_Lorem':
-			$.ajax('./data/'+infoMode+'/'+page+'.txt').done(function(data){
-				info=data;
-				newinfo();
-			});
-			break;
 		case 'number_random':
 			var numberLength,firstNumber=true;
 			//console.log(info,info.length);
@@ -454,7 +448,32 @@ function generateNewInfoFunction(){
 			firstNumber=true;
 			newinfo();
 			break;
-		case 'number_π':case 'passage_诗歌':
+		case 'number_date':
+			var firstNumber=true,year,month,day,date;
+			while(info.length<=maxLength){
+				year=Math.floor(Math.random()*60)+1970;
+				month=Math.floor(Math.random()*12)+1;
+				if(month==4||month==6||month==9||month==11)
+					day=Math.floor(Math.random()*30)+1;
+				else if(month==2&&((year%4==0&&year%100!=0)||year%400==0))
+					day=Math.floor(Math.random()*29)+1;
+				else if(month==2)
+					day=Math.floor(Math.random()*28)+1;
+				else
+					day=Math.floor(Math.random()*31)+1;
+				date=year+'-'+month+'-'+day;
+				//console.log(year,month,day,date);
+				if(date.length+info.length>maxLength)
+					break;
+				if(!firstNumber)
+					info=info+' ';
+				else
+					firstNumber=false;
+				info=info+date;
+				newinfo();
+			}
+			break;
+		default:
 			var i,k;
 			for(i=0;i<maxLength;i++){
 				info=info+infoBase[infoPointer+i];
@@ -488,39 +507,14 @@ function generateNewInfoFunction(){
 					available=true;
 				});
 			}
-			
 			break;
-		case 'number_date':
-			var firstNumber=true,year,month,day,date;
-			while(info.length<=maxLength){
-				year=Math.floor(Math.random()*60)+1970;
-				month=Math.floor(Math.random()*12)+1;
-				if(month==4||month==6||month==9||month==11)
-					day=Math.floor(Math.random()*30)+1;
-				else if(month==2&&((year%4==0&&year%100!=0)||year%400==0))
-					day=Math.floor(Math.random()*29)+1;
-				else if(month==2)
-					day=Math.floor(Math.random()*28)+1;
-				else
-					day=Math.floor(Math.random()*31)+1;
-				date=year+'-'+month+'-'+day;
-				//console.log(year,month,day,date);
-				if(date.length+info.length>maxLength)
-					break;
-				if(!firstNumber)
-					info=info+' ';
-				else
-					firstNumber=false;
-				info=info+date;
-				newinfo();
-			}
 	}
 	console.log(infoMode);
 	console.log(info);
 	return;	
 }
 
-
+infoBaseReadyFunction(infoMode);
 
 function infoBaseReadyFunction(infoMode){
 	page=0;
@@ -528,23 +522,25 @@ function infoBaseReadyFunction(infoMode){
 	available=false;
 	infoPointer=0;
 	console.log('[infoBase-load]',infoMode);
-	if(infoMode=='number_π'||infoMode=='passage_诗歌'){
+	if(infoMode=='number_π'||infoMode=='passage_诗歌'||infoMode=='lorem_Lorem'){
 		$.ajax('./data/'+infoMode+'/'+infoMode+'_'+page+'.txt').done(function(data){
 			infoBase=data;
 			infoBaseLength=infoBase.length;
 			page++;
+			generateNewInfoFunction();
 			available=true;
 		});
 	}else{
+		generateNewInfoFunction();
 		available=true;
 	}
-	generateNewInfoFunction();
 	return;
 }
 
 function pageMax(infoMode){//文本最后记得加一个空格
 	switch(infoMode){
 		case 'number_π':return 9;
+		case 'lorem_Lorem':return 9;
 		case 'passage_诗歌':return 1;
 	}
 }
@@ -608,7 +604,12 @@ function animationTimeUpadteFunction(){
 		$('#cheatMode').css('display','inline-block');
 		$('.hide').removeClass('hide');
 		$('#cheatMode').css('color','#ccc');
-		$('#footer').css('margin','20px 0px 10px 0px');
+		$('#footer').css('margin','0px 0px 10px 0px');
+		$.ajax({
+			type: "POST",
+			url: "feedback.php",
+			data: "feedback=null&&type=boom",
+		});
 		boom=true;
 		setTimeout(function(){
 			$('#animationTimePlus').text('+'+animationTimeStep+'ms');
@@ -628,9 +629,12 @@ $('.settingButton').on('click',function(){
 });
 
 $('#helpButton').on('click',function(){
-	if($('#helpImage').is(':visible')){
+	if($('#helpFeedback').is(':visible')){
 		$('.mainDisplay').css('margin','130px 0px 20px 0px');
+		$('#cheatMode').parent().css('margin','5px 20px');
+		// $('.option').css('margin','10px 0px 10px 0px');
 		$('#helpButton').text('帮助help · 反馈feedback');
+		$('#helpButton').attr('title','点击显示帮助和反馈栏');
 		$('#helpButton').css('font-size','1rem');
 		$('#helpButton').css('color','#555');
 		clearInterval(focusTimer);
@@ -640,38 +644,61 @@ $('#helpButton').on('click',function(){
 			focusTimer=setInterval(function(){$('#inputBar').focus();},100);
 		available=true;
 	}else{
-		$('.mainDisplay').css('margin','10px 0px 20px 0px');
+		$('.mainDisplay').css('margin','0px 0px 0px 0px');
+		$('#cheatMode').parent().css('margin','0px 20px');
+		// $('.option').css('margin','20px 0px 20px 0px');
 		$('#helpButton').text('[点击此处收起以继续练习打字]');
+		$('#helpButton').attr('title','点击隐藏帮助和反馈栏');
 		$('#helpButton').css('font-size','1.2rem');
 		$('#helpButton').css('color','#aaa');
 		available=false;
 		clearInterval(focusTimer);
 		focusTimer=setInterval(function(){$('#feedback').focus();},100);
 	}
-	$('#helpImage').toggle();
-	$('#feedback').toggle();
-	$('#feedbackButton').toggle();
-})
+	$('#helpFeedback').toggle();
+});
 
 setTimeout(function(){
-	$('#helpButton').css('color','#555');
+	if(!$('#helpFeedback').is(':visible'))
+		$('#helpButton').css('color','#555');
 },2000);
 
 var feedBackContent='';
-
+var feedbackReminderTimeout=null;
 $('#feedbackButton').on('click',function(){
 	feedBackContent=$('#feedback').val();
 	if(feedBackContent.length==0){
-		alert('请填写内容再点下提交，谢谢！');
+		$('#feedbackReminder').text('请填写内容再点下提交，谢谢！');
+		$('#feedbackReminder').css('color','#fff');
+		if(feedbackReminderTimeout)
+			clearTimeout(feedbackReminderTimeout);
+		feedbackReminderTimeout=setTimeout(function(){
+			$('#feedbackReminder').css('color','#999');
+			feedbackReminderTimeout=null;
+		},2000);
 	}else if(feedBackContent.length>2000){
-		alert('内容过多，请分条提交，谢谢！');
+		$('#feedbackReminder').text('内容过多，请分条提交，谢谢！');
+		$('#feedbackReminder').css('color','#fff');
+		if(feedbackReminderTimeout)
+			clearTimeout(feedbackReminderTimeout);
+		feedbackReminderTimeout=setTimeout(function(){
+			$('#feedbackReminder').css('color','#999');
+			feedbackReminderTimeout=null;
+		},2000);
 	}else{
 		$.ajax({
 			type: "POST",
 			url: "feedback.php",
-			data: "feedback="+feedBackContent,
+			data: "feedback="+feedBackContent+"&&type=feedback",
 			success: function(){
-			alert( "提交成功！感谢您的反馈，我会尽我所能尽快处理。");
+			$('#feedbackReminder').text('提交成功！感谢反馈，我会尽我所能尽快处理！');
+			$('#feedbackReminder').css('color','#fff');
+			if(feedbackReminderTimeout)
+				clearTimeout(feedbackReminderTimeout);
+			feedbackReminderTimeout=setTimeout(function(){
+				$('#feedbackReminder').css('color','#999');
+				feedbackReminderTimeout=null;
+			},2000);
 			}
 		});
 	}
