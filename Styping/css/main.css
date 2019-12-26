@@ -13,7 +13,7 @@ body{
 }
 
 .mainDisplay{
-	margin: 200px 0px 20px 0px;
+	margin: 130px 0px 20px 0px;
 	background: rgba(255,255,255,0.1);
 	padding: 20px;
 }
@@ -60,7 +60,7 @@ body{
 }
 
 .space{
-	padding: 0px 3.586px;
+	margin: 5px -2.469px;
 }
 
 .space.char{
@@ -263,4 +263,22 @@ body{
 .settingTitle{
 	display: block !important;
 	margin: 0px -20px;
+}
+
+#footer{
+	color: #555;
+	text-align:center;
+	margin: 60px 0px 10px 0px;
+	bottom:0;
+}
+
+#helpImage,#feedback,#feedbackButton{
+	display: none;
+}
+
+#helpButton{
+	background: transparent;
+	color: #999;
+	border: none;
+	outline: none !important;
 }

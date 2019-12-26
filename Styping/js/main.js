@@ -5,6 +5,7 @@ var totalSpeedWPM=0,lineSpeedWPM=0,totalSpeedCPS=0,lineSpeedCPS=0,outPutSpeed=0;
 
 var infoMode='lorem_Lorem';
 var info='happy new year';
+//var logTimer=setInterval(function(){console.log('[logTimer]',$('#input').width());},1000);
 
 var available=true,timems=0,timeTemp,firstChar=true;
 var cnt=0,lineCnt=0,answerCnt=7,spaceCnt=0,ac1CntLine=0,ac2CntLine=0,ac1RateLine=1,ac2RateLine=1,wrongNewLine=false;//该行数据
@@ -38,9 +39,10 @@ function keyPressFunction(inputChar){
 	if(cnt>=answerCnt){
 		if(inputChar!=13&&inputChar!=32){//enter/space
 			console.log('Incorrectly press ['+String.fromCharCode(inputChar)+'] for starting a new line');
-			$('#input').append('<div class="char prompt">['+String.fromCharCode(inputChar)+']</div>\n');
-			if(countLineBreakIntoAccuracy)
+			if(countLineBreakIntoAccuracy){
+				$('#input').append('<div class="char prompt">['+String.fromCharCode(inputChar)+']</div>\n');
 				wrongNewLine=true;
+			}	
 		}
 		nextpage();
 		return;
@@ -258,6 +260,7 @@ $('.contentDetail').on('click',function(){
 	infoMode=$(this).parent().attr('className')+'_'+$(this).text();
 	//console.log(infoMode);
 	infoBaseReadyFunction(infoMode);
+
 	optionActivefunction();
 })
 
@@ -426,6 +429,7 @@ $('#ac').on('click',function(){
 
 var maxLength=55,pageOfPi=1,infoPointer=0,infoBase,infoBaseLength,infoBaseTemp='';
 function generateNewInfoFunction(){
+	maxLength=Math.floor($('#input').width()/18)-2;
 	info='';
 	switch(infoMode){
 		case 'lorem_Lorem':
@@ -534,6 +538,7 @@ function infoBaseReadyFunction(infoMode){
 	}else{
 		available=true;
 	}
+	generateNewInfoFunction();
 	return;
 }
 
@@ -590,7 +595,11 @@ function animationTimeUpadteFunction(){
 	$('#animationTimePlus').text('+'+animationTimeStep+'ms');
 	$('#animationTime').val(animationTime);
 	if(animationTime>20000){
-		animationTime=20000;
+		animationTime=5;
+		animationTimeStep=1;
+		$('#animationTimeMinus').text('-'+animationTimeStep+'ms');
+		$('#animationTimePlus').text('+'+animationTimeStep+'ms');
+		$('#animationTime').val(animationTime);
 		$('#animationTimePlus').text('BOOM!!!');
 		$('#animationTimePlus').css('color','#fff');
 		$('#animationTimeMinus').css('font-size','0.2rem');
@@ -599,6 +608,7 @@ function animationTimeUpadteFunction(){
 		$('#cheatMode').css('display','inline-block');
 		$('.hide').removeClass('hide');
 		$('#cheatMode').css('color','#ccc');
+		$('#footer').css('margin','20px 0px 10px 0px');
 		boom=true;
 		setTimeout(function(){
 			$('#animationTimePlus').text('+'+animationTimeStep+'ms');
@@ -616,3 +626,54 @@ function animationTimeUpadteFunction(){
 $('.settingButton').on('click',function(){
 	optionActivefunction();
 });
+
+$('#helpButton').on('click',function(){
+	if($('#helpImage').is(':visible')){
+		$('.mainDisplay').css('margin','130px 0px 20px 0px');
+		$('#helpButton').text('帮助help · 反馈feedback');
+		$('#helpButton').css('font-size','1rem');
+		$('#helpButton').css('color','#555');
+		clearInterval(focusTimer);
+		if(inputBarMode=='off')
+			focusTimer=setInterval(function(){$('#inputBTN').focus();},100);
+		else
+			focusTimer=setInterval(function(){$('#inputBar').focus();},100);
+		available=true;
+	}else{
+		$('.mainDisplay').css('margin','10px 0px 20px 0px');
+		$('#helpButton').text('[点击此处收起以继续练习打字]');
+		$('#helpButton').css('font-size','1.2rem');
+		$('#helpButton').css('color','#aaa');
+		available=false;
+		clearInterval(focusTimer);
+		focusTimer=setInterval(function(){$('#feedback').focus();},100);
+	}
+	$('#helpImage').toggle();
+	$('#feedback').toggle();
+	$('#feedbackButton').toggle();
+})
+
+setTimeout(function(){
+	$('#helpButton').css('color','#555');
+},2000);
+
+var feedBackContent='';
+
+$('#feedbackButton').on('click',function(){
+	feedBackContent=$('#feedback').val();
+	if(feedBackContent.length==0){
+		alert('请填写内容再点下提交，谢谢！');
+	}else if(feedBackContent.length>2000){
+		alert('内容过多，请分条提交，谢谢！');
+	}else{
+		$.ajax({
+			type: "POST",
+			url: "feedback.php",
+			data: "feedback="+feedBackContent,
+			success: function(){
+			alert( "提交成功！感谢您的反馈，我会尽我所能尽快处理。");
+			}
+		});
+	}
+})
+
