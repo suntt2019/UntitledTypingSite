@@ -501,9 +501,13 @@ function generateNewInfoFunction(){
 					infoBaseTemp='';
 					infoPointer=0;
 					console.log('[Load]','info',info,'infoBase',infoBase,'infoBaseTemp',infoBaseTemp);
-					page++;
-					if(page>pageMax(infoMode))
-						page=0;
+					if(IsContinuous(infoMode)){
+						page++;
+						if(page>pageMax(infoMode))
+							page=0;
+					}else{
+						page=Math.floor(Math.random()*(pageMax(infoMode)+1));
+					}
 					available=true;
 				});
 			}
@@ -517,12 +521,18 @@ function generateNewInfoFunction(){
 infoBaseReadyFunction(infoMode);
 
 function infoBaseReadyFunction(infoMode){
-	page=0;
+	if(IsContinuous(infoMode))
+		page=0;
+	else
+		page=Math.floor(Math.random()*(pageMax(infoMode)+1));
 	infoBase=='';
 	available=false;
 	infoPointer=0;
 	console.log('[infoBase-load]',infoMode);
-	if(infoMode=='number_π'||infoMode=='passage_诗歌'||infoMode=='lorem_Lorem'){
+	if(infoMode=='number_random'||infoMode=='number_date'){
+		generateNewInfoFunction();
+		available=true;
+	}else{
 		$.ajax('./data/'+infoMode+'/'+infoMode+'_'+page+'.txt').done(function(data){
 			infoBase=data;
 			infoBaseLength=infoBase.length;
@@ -530,21 +540,26 @@ function infoBaseReadyFunction(infoMode){
 			generateNewInfoFunction();
 			available=true;
 		});
-	}else{
-		generateNewInfoFunction();
-		available=true;
 	}
 	return;
 }
 
 function pageMax(infoMode){//文本最后记得加一个空格
 	switch(infoMode){
-		case 'number_π':return 9;
-		case 'lorem_Lorem':return 9;
 		case 'passage_诗歌':return 1;
+		case 'words_CET4':return 11; 
+		case 'words_CET6':return 3; 
+		default:return 9;
 	}
 }
 
+function IsContinuous(infoMode){
+	switch(infoMode){
+		case 'words_CET4':return 0; 
+		case 'words_CET6':return 0; 
+		default:return 1;
+	}
+}
 
 $('#animationTimeMinus').on('click',function(){
 	animationTime-=animationTimeStep;

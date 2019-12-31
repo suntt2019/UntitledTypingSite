@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char **argv){
 	stringstream ss;
 	int cntPerFile;
-	char str[1000005],filename2[50]="_0.txt",filename1[50],filename0[50],cwd[500],*p;
+	char str[1000005],filename2[50]="_00.txt",filename1[50],filename0[50],cwd[500],*p;
 	FILE * finput;
 	if(argc==1){
 		printf("You didn't input the size of each file.\nSo, we divided them into 1K using the default setting.\n");
@@ -30,11 +30,11 @@ int main(int argc, char **argv){
 		printf("[ERROR]Can't find that file\n");
 		return -1;
 	}
-	for(int i=0;i<10;i++){
+	for(int i=0;i<100;i++){
 		strcpy(filename1,filename0);
 		fgets(str,cntPerFile+1,finput);
-		//filename2[3]=i/10+'0';
-		filename2[1]=i%10+'0';
+		filename2[1]=i/10+'0';
+		filename2[2]=i%10+'0';
 		strcat(filename1,filename2);
 		printf("[output]%s\n",filename1);
 		FILE * foutput=fopen(filename1,"w");
