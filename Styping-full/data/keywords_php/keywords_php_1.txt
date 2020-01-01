@@ -1,0 +1,1 @@
+endfor while extends endfor protected function unset() finally global list() include_once instanceof namespace private global implements include endif endswitch default declare unset() isset() return 

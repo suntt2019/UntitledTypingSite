@@ -1,0 +1,1 @@
+or enum double enum constinit thread_local requires and_eq true virtual public char8_t struct char32_t requires operator reinterpret_cast typedef catch goto and thread_local decltype class sizeof char 

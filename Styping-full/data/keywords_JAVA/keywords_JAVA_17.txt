@@ -1,0 +1,1 @@
+new interface try package void transient throws abstract if boolean class else synchronized boolean final double public synchronized byte throws double strictfp requires strictfp continue boolean byte 

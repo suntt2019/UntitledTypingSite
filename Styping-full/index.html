@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Typing Site</title>
+	<link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/SourceCodePro.css">
+	<link id="mainCSS" rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<form>
+			<input type="text" id="inputBar">
+			<input type="submit" id="inputSubmitButton" value="submit">
+		</form>
+		<button id="inputBTN">inputBTN</button>
+		<div class="mainDisplay row">
+			<div class="col-md-10">
+				<div id="input">
+				<div class="preText" title="你输入的">>&nbsp;</div>
+				</div>
+				<div id="answer">
+					<div class="preText" title="你要输入的">>&nbsp;</div>
+					<div id="ach1" class="answerChar">w</div>
+					<div id="ach2" class="answerChar">e</div>
+					<div id="ach3" class="answerChar">l</div>
+					<div id="ach4" class="answerChar">c</div>
+					<div id="ach5" class="answerChar">o</div>
+					<div id="ach6" class="answerChar">m</div>
+					<div id="ach7" class="answerChar">e</div>
+				</div>
+			</div>
+			<div class="col-md-2 panel">
+				<div id="accuracy">
+					<button id="ac" title="准确度AccuracyAll(总计)">Aca</button>
+					<div id="ac1" title="第一次就敲对的正确率(第二行)">
+						<!-- TODO:增加一个更好的方式显示提示信息（代替title） -->
+						<div id="ac11">100</div><div>.</div><div id="ac12">0</div>
+					</div>
+					<div id="ac2" title="提交时正确率(第一行)">
+						<div id="panelSP">/</div><div id="ac21">100</div><div>.</div><div id="ac22">0</div>
+					</div>
+				</div>
+				<div id="speed">
+					<div id="sp" title="速度Speed">Sp</div> <div id="sp01">0</div><div>.</div><div id="sp02">0</div><button id="spUnit" title="词数/每分钟(总计)">WPM-all</button>
+				</div>
+			</div>
+		</div>
+		<div class="option row inactive">
+			<!-- TODO:简洁版本 -->
+			<div class="col-md-8" id="content">
+				<div class="optionTitle">内容content</div>
+				<div class="contentClass" className="number">
+					<button class="contentTitle">数字-Number</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail">π</button>
+					<button class="contentDetail">date</button>
+				</div>
+				<div class="contentClass" className="words">
+					<button class="contentTitle">词汇-words</button>
+					|
+					<button class="contentDetail default">random</button>
+					<button class="contentDetail unusable">NMET</button>
+					<button class="contentDetail">CET4</button>
+					<button class="contentDetail">CET6</button>
+<!-- 					<button class="contentDetail unusable">TOEFL</button>
+					<button class="contentDetail unusable">IELTS</button> -->
+				</div>
+				<div class="contentClass chosen" className="passage">
+					<button class="contentTitle chosen">文章-Passage</button>
+					|
+					<button class="contentDetail default chosen">welcome</button>
+					<button class="contentDetail unusable">CGTN-news</button>
+					<button class="contentDetail unusable">poem</button>
+<!-- 					<button class="contentDetail unusable">名著</button> -->
+				</div>
+				<div class="contentClass" className="keywords">
+					<button class="contentTitle">关键词-Keywords</button>
+					|
+					<button class="contentDetail default">mixed</button>
+					<button class="contentDetail">C</button>
+					<button class="contentDetail">C++</button>
+					<button class="contentDetail">JAVA</button>
+					<button class="contentDetail">python</button>
+					<button class="contentDetail">php</button>
+				</div>
+				<div class="contentClass" className="code">
+					<button class="contentTitle unusable">代码-Code</button>
+					|
+					<button class="contentDetail default unusable">random</button>
+<!-- 					<button class="contentDetail unusable">历史经典</button>
+					<button class="contentDetail unusable">标准程序</button>
+					<button class="contentDetail unusable">算法经典</button> -->
+				</div>
+				<div class="contentClass" className="lorem">
+					<button class="contentTitle">天书-Lorem</button>
+					|
+					<button class="contentDetail default">Lorem</button>
+				</div>
+			</div>
+			<div class="col-md-4" id="setting">
+				<div class="optionTitle">设置Setting</div>
+				<div class="settingClass">
+					<div class="settingTitle" title="是否开启虚拟键盘输入(仅移动端设备有效)">虚拟键盘输入</div>
+					<div class="btnGroup">
+						<button class="settingButton" id="inputBarMode-content" title="推荐的虚拟键盘输入检测方式(输入内容检测)，适用于大多数情况">
+							开启(推荐)
+						</button>
+						<button class="settingButton" id="inputBarMode-event" title="备用的虚拟键盘输入检测方式(输入事件检测)，用于推荐方式无法使用的情况">
+							开启(备用)
+						</button>
+					</div>
+				</div>
+				<div class="settingClass">
+					<div class="settingTitle" title="换行相关的时间/输入是否计入准确度和速度的统计">换行是否计入统计</div>
+					<button class="settingButton" id="timeBetweenLines" title="输入两行之间的间隙时间也计入速度计算用的计时">
+						两行间空闲时间
+					</button>
+					<button class="settingButton" id="countLineBreakIntoAccuracy" title="打完一行后不以空格/回车结束则视为一个错误输入">
+						换行符
+					</button>
+				</div>
+				<div class="settingClass">
+					<div class="settingTitle" title="动画时间长度(每个字符)">过场动画时间(每个字符)</div>
+					<button class="settingButton" id="animationTimeMinus" title="动画时间长度减短">					-1ms
+					</button>
+					<input type="text" id="animationTime" title="动画时间长度(每个字符)" readonly  unselectable="on" value="5">
+					<div>
+						ms
+					</div>
+					<button class="settingButton" id="animationTimePlus" title="动画时间长度延长">					+1ms
+					</button>
+				</div>
+				<div class="settingClass hide">
+					<button class="settingButton" title="试试看#滑稽" id="cheatMode">作弊模式</button>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+				<div>
+					<button id="helpButton" title="点击显示帮助和反馈栏">帮助help · 反馈feedback</button>
+					<button id="colorButton" title="点击切换至亮色模式"> - 亮色模式light-mode</button>
+					<div id="helpFeedback" class="row">
+						<div class="col-md-6">
+							<img src="./img/help.jpg" id="helpImage">
+							帮助help
+						</div>
+						<div class="col-md-6">
+							<div id="feedbackTitle">反馈feedback</div>
+							<textarea rows="4" cols="40" name="feedback" id="feedback"></textarea>
+							<div id="feedbackReminder">&nbsp;</div>
+							<button id="feedbackButton">提交</button>
+						</div>
+					</div>
+				</div>
+			<div>©2019 sun123t2.com All rights reserved.</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

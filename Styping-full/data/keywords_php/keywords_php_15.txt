@@ -1,0 +1,1 @@
+insteadof private const list() endforeach interface endfor return finally do while finally return namespace goto endfor var endwhile echo class or while try empty() xor namespace throw callable var endif 

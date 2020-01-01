@@ -1,0 +1,1 @@
+die() array() xor require function final xor clone exit() yield yield enddeclare isset() include_once do try public endforeach case try protected static exit() else as trait const require_once endif array() 

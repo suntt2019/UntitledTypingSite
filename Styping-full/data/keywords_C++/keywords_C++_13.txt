@@ -1,0 +1,1 @@
+new this double co_yield return inline int float auto namespace int struct using template co_yield double register sizeof break operator dynamic_cast dynamic_cast double const_cast requires auto co_return 

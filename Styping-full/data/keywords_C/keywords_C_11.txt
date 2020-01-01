@@ -1,0 +1,1 @@
+_Generic do int unsigned _Bool _Imaginary break void _Noreturn long _Generic else unsigned union _Noreturn _Generic _Static_assert else do _Alignas _Bool short break void float unsigned _Atomic else _Static_assert 

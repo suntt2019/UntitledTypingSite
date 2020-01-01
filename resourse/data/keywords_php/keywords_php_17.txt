@@ -1,0 +1,1 @@
+declare return print eval() class final include_once catch try declare insteadof switch exit() clone extends or __halt_compiler() new empty() require while if throw elseif include exit() throw switch 

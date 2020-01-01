@@ -1,0 +1,1 @@
+isset() and goto switch long abstract enum isset() is typedef using catch finally None for _Generic def finally asm _Noreturn continue break array() compl lambda elseif volatile native if if const bitor 

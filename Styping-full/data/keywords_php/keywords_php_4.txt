@@ -1,0 +1,1 @@
+static eval() include_once default new endwhile public trait instanceof catch static endwhile else xor switch include extends require_once enddeclare abstract include endfor require_once empty() or use 

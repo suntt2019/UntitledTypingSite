@@ -1,0 +1,1 @@
+asm sizeof long volatile typename this bitand extern throw if class typedef typedef auto not char32_t nullptr alignas static_cast xor and_eq co_await or alignof typename reinterpret_cast this catch catch 
