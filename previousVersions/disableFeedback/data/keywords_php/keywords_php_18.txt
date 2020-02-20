@@ -1,0 +1,1 @@
+isset() require public foreach elseif foreach implements class static else use default break if continue as require empty() default case instanceof array() list() endif goto if implements default enddeclare 

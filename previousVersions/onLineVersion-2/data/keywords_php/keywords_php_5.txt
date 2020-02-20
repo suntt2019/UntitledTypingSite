@@ -1,0 +1,1 @@
+foreach require extends const abstract namespace as abstract goto declare as abstract static new new endif use callable insteadof else goto list() unset() global yield extends continue empty() include 

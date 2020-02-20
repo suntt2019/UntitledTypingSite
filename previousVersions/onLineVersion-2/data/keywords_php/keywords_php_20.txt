@@ -1,0 +1,1 @@
+break require global array() as require_once yield include include_once foreach print die() catch clone exit() endwhile declare finally print function include catch namespace or eval() isset() print namespace 

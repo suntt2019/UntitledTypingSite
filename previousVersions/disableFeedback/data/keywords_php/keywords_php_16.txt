@@ -1,0 +1,1 @@
+do elseif yield const foreach endwhile public xor elseif require_once foreach break static clone static instanceof endswitch empty() if clone for while switch try use protected isset() interface __halt_compiler() 

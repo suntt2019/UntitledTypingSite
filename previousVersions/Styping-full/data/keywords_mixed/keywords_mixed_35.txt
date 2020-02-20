@@ -1,0 +1,1 @@
+is None switch bool dynamic_cast var static while _Imaginary import requires bool empty() void static continue do sizeof xor pass xor transient super else char asm trait false _Bool use package yield 

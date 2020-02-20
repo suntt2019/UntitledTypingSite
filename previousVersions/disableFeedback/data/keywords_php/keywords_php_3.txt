@@ -1,0 +1,1 @@
+final if unset() eval() endforeach require function echo insteadof or class protected enddeclare extends echo do endswitch do for endforeach include catch empty() for function include_once interface enddeclare 

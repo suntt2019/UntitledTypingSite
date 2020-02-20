@@ -1,0 +1,1 @@
+declare declare callable continue echo continue or else for catch isset() echo else endforeach var extends eval() xor require_once var callable return instanceof instanceof protected elseif else public 

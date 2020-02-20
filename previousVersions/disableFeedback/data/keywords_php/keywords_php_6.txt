@@ -1,0 +1,1 @@
+callable die() require array() protected protected class if xor throw return global namespace var as trait for trait die() class global die() array() or const case else finally const catch public echo 

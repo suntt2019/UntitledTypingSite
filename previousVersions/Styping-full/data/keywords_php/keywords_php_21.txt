@@ -1,0 +1,1 @@
+print endforeach clone elseif new endwhile empty() continue break finally clone interface die() enddeclare __halt_compiler() class goto use as endswitch trait instanceof if catch new __halt_compiler() 

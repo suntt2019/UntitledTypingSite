@@ -1,0 +1,2901 @@
+
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 
+auto 
+break 
+case 
+char 
+const 
+continue 
+default 
+do 
+double 
+else 
+enum 
+extern 
+float 
+for 
+goto 
+if 
+inline (since C99)
+int 
+long 
+register 
+restrict (since C99)
+return 
+short 
+signed 
+sizeof 
+static 
+struct 
+switch 
+typedef 
+union 
+unsigned 
+void 
+volatile 
+while 
+_Alignas (since C11)
+_Alignof (since C11)
+_Atomic (since C11)
+_Bool (since C99)
+_Complex (since C99)
+_Generic (since C11)
+_Imaginary (since C99)
+_Noreturn (since C11)
+_Static_assert (since C11)
+_Thread_local (since C11)
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+abstract 
+assert 
+boolean 
+break 
+byte 
+case 
+catch 
+char 
+class 
+continue 
+const 
+default 
+do 
+double 
+else 
+enum 
+exports 
+extends 
+final 
+finally 
+float 
+for 
+goto 
+if 
+implements 
+import 
+instanceof 
+int 
+interface 
+long 
+module 
+native 
+new 
+package 
+private 
+protected 
+public 
+requires 
+return 
+short 
+static 
+strictfp 
+super 
+switch 
+synchronized 
+this 
+throw 
+throws 
+transient 
+try 
+var 
+void 
+volatile 
+while 
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+and 
+as 
+assert 
+break 
+class 
+continue 
+def 
+del 
+elif 
+else 
+except 
+False 
+finally 
+for 
+from 
+global 
+if 
+import 
+in 
+is 
+lambda 
+None 
+nonlocal 
+not 
+or 
+pass 
+raise 
+return 
+True 
+try 
+while 
+with 
+yield 

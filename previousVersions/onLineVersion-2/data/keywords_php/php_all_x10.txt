@@ -1,0 +1,671 @@
+
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	
+__halt_compiler() 
+abstract 
+and	
+array() 
+as 
+break 
+callable (as of PHP 5.4) 
+case 
+catch 
+class 
+clone 
+const 
+continue 
+declare 
+default 
+die() 
+do 
+echo 
+else 
+elseif 
+empty() 
+enddeclare 
+endfor 
+endforeach 
+endif 
+endswitch 
+endwhile 
+eval() 
+exit() 
+extends 
+final 
+finally (从PHP 5.5开始)
+for 
+foreach 
+function 
+global 
+goto (从PHP 5.3开始)
+if 
+implements 
+include 
+include_once 
+instanceof 
+insteadof (从PHP 5.4开始)
+interface 
+isset() 
+list() 
+namespace (从PHP 5.3开始)	
+new 
+or 
+print 
+private 
+protected 
+public 
+require 
+require_once 
+return 
+static 
+switch 
+throw 
+trait (从PHP 5.4开始)
+try 
+unset() 
+use 
+var 
+while 
+xor 
+yield (从PHP 5.5开始)	

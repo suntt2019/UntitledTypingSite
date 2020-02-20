@@ -1,0 +1,920 @@
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 
+alignas (C++11 起)
+alignof (C++11 起)
+and 
+and_eq 
+asm 
+auto (1)
+bitand 
+bitor 
+bool 
+break 
+case 
+catch 
+char 
+char8_t (C++20 起)
+char16_t (C++11 起)
+char32_t (C++11 起)
+class (1)
+compl 
+concept (C++20 起)
+const 
+consteval (C++20 起)
+constexpr (C++11 起)
+constinit (C++20 起)
+const_cast 
+continue 
+co_await (C++20 起)
+co_return (C++20 起)
+co_yield (C++20 起)
+decltype (C++11 起)
+default (1)
+delete (1)
+do 
+double 
+dynamic_cast 
+else 
+enum 
+explicit 
+export (1)(3)
+extern (1)
+false 
+float 
+for 
+friend 
+goto 
+if 
+inline (1)
+int 
+long 
+mutable (1)
+namespace 
+new 
+noexcept (C++11 起)
+not 
+not_eq 
+nullptr (C++11 起)
+operator 
+or 
+or_eq 
+private 
+protected 
+public 
+register (2)
+reinterpret_cast 
+requires (C++20 起)
+return 
+short 
+signed 
+sizeof (1)
+static 
+static_assert (C++11 起)
+static_cast 
+struct (1)
+switch 
+template 
+this 
+thread_local (C++11 起)
+throw 
+true 
+try 
+typedef 
+typeid 
+typename 
+union 
+unsigned 
+using (1)
+virtual 
+void 
+volatile 
+wchar_t 
+while 
+xor 
+xor_eq 

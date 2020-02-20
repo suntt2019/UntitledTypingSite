@@ -1,0 +1,1 @@
+signed long _Alignof _Generic for _Alignas default sizeof _Thread_local char auto _Complex enum continue double auto continue signed extern sizeof default switch enum _Imaginary _Alignof float register 

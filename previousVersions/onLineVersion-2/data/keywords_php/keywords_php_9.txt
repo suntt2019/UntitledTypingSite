@@ -1,0 +1,1 @@
+isset() use endfor final namespace enddeclare endwhile abstract endswitch or exit() final break default while echo use private include_once xor unset() var clone clone extends switch empty() echo try 

@@ -1,0 +1,1 @@
+struct _Complex while for restrict sizeof _Complex float auto _Generic _Noreturn switch register register do _Thread_local auto _Atomic case volatile restrict auto const _Alignof double _Atomic _Thread_local 

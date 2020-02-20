@@ -1,0 +1,1 @@
+_Thread_local case restrict return struct _Imaginary goto static void struct _Static_assert _Alignof restrict volatile for while unsigned continue while for _Imaginary do _Alignas do extern _Generic const 
